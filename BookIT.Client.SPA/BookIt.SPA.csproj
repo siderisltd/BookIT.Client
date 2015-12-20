@@ -45,11 +45,15 @@
     <Content Include="partials\account\register-company.html" />
     <Content Include="partials\account\register-user.html" />
     <Content Include="partials\error\not-authorized.html" />
+    <Content Include="partials\home\footer.html" />
+    <Content Include="partials\home\header.html" />
     <Content Include="scripts\angular-mocks.js" />
+    <Content Include="packages.config" />
     <None Include="Properties\PublishProfiles\BookitFileDeploy.pubxml" />
     <None Include="scripts\angular.intellisense.js" />
     <Content Include="scripts\angular.js" />
     <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\app\common\bk-show-during-route-resolve-directive.js" />
     <Content Include="scripts\app\common\data.js" />
     <Content Include="scripts\app\common\main-controller.js" />
     <Content Include="scripts\app\common\notifier.js" />

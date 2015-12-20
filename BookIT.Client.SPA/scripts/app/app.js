@@ -96,9 +96,9 @@
         }
     };
 
-
+    angular.module('bookitApp.directives', []);
     angular.module('bookitApp.services', []);
-    angular.module('bookitApp.controllers', ['bookitApp.services']);
+    angular.module('bookitApp.controllers', ['bookitApp.services', 'bookitApp.directives']);
 
     angular
         .module('bookitApp', ['ngRoute', 'kendo.directives', 'ngCookies', 'bookitApp.controllers'])

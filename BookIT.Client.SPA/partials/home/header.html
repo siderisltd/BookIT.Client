@@ -1,0 +1,34 @@
+﻿<div class="container">
+    <div class="navbar-header">
+        <a href="/" class="navbar-brand">BookIt</a>
+    </div>
+
+    <div class="navbar-collapse collapse" id="navbar-main">
+        <ul class="nav navbar-nav">
+
+            <li>
+                <a href="/info/about-us">About us</a>
+            </li>
+            <li>
+                <a href="/info/our-mission">Our mission</a>
+            </li>
+            <li>
+                <a href="/info/community">Community</a>
+            </li>
+            <li>
+                <a href="/info/covered-area">Covered area</a>
+            </li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" ng-if="!vm.globallySetCurrentUserWhenLogin">
+            <li><a href="/account/login">Login</a></li>
+            <li><a href="/account/register">Register</a></li>
+        </ul>
+
+        <ul class="nav navbar-nav navbar-right" ng-if="vm.globallySetCurrentUserWhenLogin">
+            <li><a href="#">Hello {{vm.globallySetCurrentUserWhenLogin}}</a></li>
+            <li><a href="#" ng-click="vm.logout()">Logout</a></li>
+        </ul>
+
+    </div>
+</div>
