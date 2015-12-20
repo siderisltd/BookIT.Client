@@ -1,0 +1,1 @@
+http://getfuelux.com/javascript.html    -> browser Independant radio button & Wizard at the bottom of the page
