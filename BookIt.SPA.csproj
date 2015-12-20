@@ -1,0 +1,223 @@
+﻿<?xml version="1.0" encoding="utf-8"?>
+<Project ToolsVersion="12.0" DefaultTargets="Build" xmlns="http://schemas.microsoft.com/developer/msbuild/2003">
+  <Import Project="..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props" Condition="Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" />
+  <Import Project="..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props" Condition="Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" />
+  <Import Project="$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props" Condition="Exists('$(MSBuildExtensionsPath)\$(MSBuildToolsVersion)\Microsoft.Common.props')" />
+  <PropertyGroup>
+    <Configuration Condition=" '$(Configuration)' == '' ">Debug</Configuration>
+    <Platform Condition=" '$(Platform)' == '' ">AnyCPU</Platform>
+    <ProductVersion>
+    </ProductVersion>
+    <SchemaVersion>2.0</SchemaVersion>
+    <ProjectGuid>{380E91AE-C3F6-4BA4-AB8F-EBA4386DB8D9}</ProjectGuid>
+    <ProjectTypeGuids>{349c5851-65df-11da-9384-00065b846f21};{fae04ec0-301f-11d3-bf4b-00c04f79efbc}</ProjectTypeGuids>
+    <OutputType>Library</OutputType>
+    <AppDesignerFolder>Properties</AppDesignerFolder>
+    <RootNamespace>BookIt.SPA</RootNamespace>
+    <AssemblyName>BookIt.SPA</AssemblyName>
+    <TargetFrameworkVersion>v4.5.2</TargetFrameworkVersion>
+    <UseIISExpress>true</UseIISExpress>
+    <IISExpressSSLPort />
+    <IISExpressAnonymousAuthentication />
+    <IISExpressWindowsAuthentication />
+    <IISExpressUseClassicPipelineMode />
+    <UseGlobalApplicationHostFile />
+    <NuGetPackageImportStamp>
+    </NuGetPackageImportStamp>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Debug|AnyCPU' ">
+    <DebugSymbols>true</DebugSymbols>
+    <DebugType>full</DebugType>
+    <Optimize>false</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>DEBUG;TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <PropertyGroup Condition=" '$(Configuration)|$(Platform)' == 'Release|AnyCPU' ">
+    <DebugType>pdbonly</DebugType>
+    <Optimize>true</Optimize>
+    <OutputPath>bin\</OutputPath>
+    <DefineConstants>TRACE</DefineConstants>
+    <ErrorReport>prompt</ErrorReport>
+    <WarningLevel>4</WarningLevel>
+  </PropertyGroup>
+  <ItemGroup>
+    <Reference Include="Microsoft.CodeDom.Providers.DotNetCompilerPlatform, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\lib\net45\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.CSharp" />
+    <Reference Include="Microsoft.Owin, Version=3.0.1.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Owin.3.0.1\lib\net45\Microsoft.Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Microsoft.Web.Infrastructure, Version=1.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Microsoft.Web.Infrastructure.1.0.0.0\lib\net40\Microsoft.Web.Infrastructure.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="Owin, Version=1.0.0.0, Culture=neutral, PublicKeyToken=f0ebd12fd5e55cc5, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\Owin.1.0\lib\net40\Owin.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Web.DynamicData" />
+    <Reference Include="System.Web.Entity" />
+    <Reference Include="System.Web.ApplicationServices" />
+    <Reference Include="System.ComponentModel.DataAnnotations" />
+    <Reference Include="System" />
+    <Reference Include="System.Data" />
+    <Reference Include="System.Core" />
+    <Reference Include="System.Data.DataSetExtensions" />
+    <Reference Include="System.Web.Extensions" />
+    <Reference Include="System.Web.Http.Common, Version=4.0.0.0, Culture=neutral, PublicKeyToken=31bf3856ad364e35, processorArchitecture=MSIL">
+      <HintPath>..\..\..\packages\System.Web.Http.Common.4.0.20126.16343\lib\net40\System.Web.Http.Common.dll</HintPath>
+      <Private>True</Private>
+    </Reference>
+    <Reference Include="System.Xml.Linq" />
+    <Reference Include="System.Drawing" />
+    <Reference Include="System.Web" />
+    <Reference Include="System.Xml" />
+    <Reference Include="System.Configuration" />
+    <Reference Include="System.Web.Services" />
+    <Reference Include="System.EnterpriseServices" />
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="packages.config" />
+    <Content Include="partials\account\register-company.html" />
+    <Content Include="partials\account\register-user.html" />
+    <Content Include="partials\error\not-authorized.html" />
+    <Content Include="scripts\angular-mocks.js" />
+    <None Include="Properties\PublishProfiles\BookitFileDeploy.pubxml" />
+    <None Include="scripts\angular.intellisense.js" />
+    <Content Include="scripts\angular.js" />
+    <Content Include="scripts\angular.min.js" />
+    <Content Include="scripts\app\common\data.js" />
+    <Content Include="scripts\app\common\main-controller.js" />
+    <Content Include="scripts\app\common\notifier.js" />
+    <Content Include="scripts\lib\angularJs\angular.min.js.map" />
+    <Content Include="scripts\angular.min.js.map" />
+    <None Include="Web.Debug.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+    <None Include="Web.Release.config">
+      <DependentUpon>Web.config</DependentUpon>
+    </None>
+  </ItemGroup>
+  <ItemGroup>
+    <Content Include="images\favicon.ico" />
+    <Content Include="index.html" />
+    <Content Include="partials\account\login.html" />
+    <Content Include="partials\account\register.html" />
+    <Content Include="partials\error\not-found.html" />
+    <Content Include="partials\home\home.html" />
+    <Content Include="partials\info\about-us.html" />
+    <Content Include="partials\info\community.html" />
+    <Content Include="partials\info\covered-area.html" />
+    <Content Include="partials\info\our-mission.html" />
+    <Content Include="scripts\app\account\auth-service.js" />
+    <Content Include="scripts\app\account\identity-service.js" />
+    <Content Include="scripts\app\app.js" />
+    <Content Include="scripts\app\account\login-controller.js" />
+    <Content Include="scripts\app\account\register-controller.js" />
+    <Content Include="scripts\app\home\home-controller.js" />
+    <Content Include="scripts\app\info\about-us-controller.js" />
+    <Content Include="scripts\app\info\community-controller.js" />
+    <Content Include="scripts\app\info\covered-area-controller.js" />
+    <Content Include="scripts\app\info\our-mission-controller.js" />
+    <Content Include="scripts\lib\angularJs\angular-cookies.js" />
+    <Content Include="scripts\lib\angularJs\angular-cookies.min.js" />
+    <Content Include="scripts\lib\angularJs\angular-mocks.js" />
+    <None Include="scripts\lib\angularJs\angular.intellisense.js" />
+    <Content Include="scripts\lib\angularJs\angular-route.js" />
+    <Content Include="scripts\lib\angularJs\angular-route.min.js" />
+    <None Include="scripts\_references.js" />
+    <Content Include="scripts\lib\angularJs\angular.js" />
+    <Content Include="scripts\lib\angularJs\angular.min.js" />
+    <Content Include="scripts\lib\bootstrap\bootstrap.js" />
+    <Content Include="scripts\lib\bootstrap\bootstrap.min.js" />
+    <Content Include="scripts\lib\cryptoJs\cryptojs.js" />
+    <Content Include="scripts\lib\cryptoJs\MD5.js" />
+    <Content Include="scripts\lib\cryptoJs\SHA1.js" />
+    <Content Include="scripts\lib\kendo-ui\kendo.all.min.js" />
+    <Content Include="scripts\lib\kendo-ui\kendo.web.min.js" />
+    <Content Include="scripts\lib\toastr\toastr.js" />
+    <Content Include="scripts\lib\toastr\toastr.min.js" />
+    <Content Include="styles\bootstrap\bootstrap-theme.css" />
+    <Content Include="styles\bootstrap\bootstrap-theme.min.css" />
+    <Content Include="styles\bootstrap\bootstrap.css" />
+    <Content Include="styles\bootstrap\bootstrap.min.css" />
+    <Content Include="scripts\lib\jquery\jquery.js" />
+    <Content Include="scripts\lib\jquery\jquery.min.js" />
+    <Content Include="styles\css-loader.css" />
+    <Content Include="styles\kendo-ui\Bootstrap\editor.png" />
+    <Content Include="styles\kendo-ui\Bootstrap\imagebrowser.png" />
+    <Content Include="styles\kendo-ui\Bootstrap\indeterminate.gif" />
+    <Content Include="styles\kendo-ui\Bootstrap\loading-image.gif" />
+    <Content Include="styles\kendo-ui\Bootstrap\loading.gif" />
+    <Content Include="styles\kendo-ui\Bootstrap\loading_2x.gif" />
+    <Content Include="styles\kendo-ui\Bootstrap\markers.png" />
+    <Content Include="styles\kendo-ui\Bootstrap\markers_2x.png" />
+    <Content Include="styles\kendo-ui\Bootstrap\slider-h.gif" />
+    <Content Include="styles\kendo-ui\Bootstrap\slider-v.gif" />
+    <Content Include="styles\kendo-ui\Bootstrap\sprite.png" />
+    <Content Include="styles\kendo-ui\Bootstrap\sprite_2x.png" />
+    <Content Include="styles\kendo-ui\Bootstrap\sprite_kpi.png" />
+    <Content Include="styles\kendo-ui\Bootstrap\sprite_kpi_2x.png" />
+    <Content Include="styles\kendo-ui\kendo.bootstrap.min.css" />
+    <Content Include="styles\kendo-ui\kendo.common.min.css" />
+    <Content Include="styles\style.css" />
+    <Content Include="styles\toastr\toastr.css" />
+    <Content Include="styles\toastr\toastr.min.css" />
+    <Content Include="Web.config" />
+  </ItemGroup>
+  <ItemGroup>
+    <Compile Include="Properties\AssemblyInfo.cs" />
+    <Compile Include="Startup.cs" />
+  </ItemGroup>
+  <ItemGroup>
+    <ProjectReference Include="..\..\BookIt.Api\Server\BookIt.Server.Api\BookIt.Server.Api.csproj">
+      <Project>{2e3539a6-f485-428d-ad5e-7a0dbcafb5cb}</Project>
+      <Name>BookIt.Server.Api</Name>
+    </ProjectReference>
+  </ItemGroup>
+  <ItemGroup />
+  <PropertyGroup>
+    <VisualStudioVersion Condition="'$(VisualStudioVersion)' == ''">10.0</VisualStudioVersion>
+    <VSToolsPath Condition="'$(VSToolsPath)' == ''">$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v$(VisualStudioVersion)</VSToolsPath>
+  </PropertyGroup>
+  <Import Project="$(MSBuildBinPath)\Microsoft.CSharp.targets" />
+  <Import Project="$(VSToolsPath)\WebApplications\Microsoft.WebApplication.targets" Condition="'$(VSToolsPath)' != ''" />
+  <Import Project="$(MSBuildExtensionsPath32)\Microsoft\VisualStudio\v10.0\WebApplications\Microsoft.WebApplication.targets" Condition="false" />
+  <ProjectExtensions>
+    <VisualStudio>
+      <FlavorProperties GUID="{349c5851-65df-11da-9384-00065b846f21}">
+        <WebProjectProperties>
+          <UseIIS>True</UseIIS>
+          <AutoAssignPort>True</AutoAssignPort>
+          <DevelopmentServerPort>51190</DevelopmentServerPort>
+          <DevelopmentServerVPath>/</DevelopmentServerVPath>
+          <IISUrl>http://localhost:51190/</IISUrl>
+          <NTLMAuthentication>False</NTLMAuthentication>
+          <UseCustomServer>False</UseCustomServer>
+          <CustomServerUrl>
+          </CustomServerUrl>
+          <SaveServerSettingsInUserFile>False</SaveServerSettingsInUserFile>
+        </WebProjectProperties>
+      </FlavorProperties>
+    </VisualStudio>
+  </ProjectExtensions>
+  <Target Name="EnsureNuGetPackageBuildImports" BeforeTargets="PrepareForBuild">
+    <PropertyGroup>
+      <ErrorText>This project references NuGet package(s) that are missing on this computer. Use NuGet Package Restore to download them.  For more information, see http://go.microsoft.com/fwlink/?LinkID=322105. The missing file is {0}.</ErrorText>
+    </PropertyGroup>
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.Net.Compilers.1.0.0\build\Microsoft.Net.Compilers.props'))" />
+    <Error Condition="!Exists('..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props')" Text="$([System.String]::Format('$(ErrorText)', '..\..\..\packages\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.1.0.0\build\Microsoft.CodeDom.Providers.DotNetCompilerPlatform.props'))" />
+  </Target>
+  <!-- To modify your build process, add your task inside one of the targets below and uncomment it. 
+       Other similar extension points exist, see Microsoft.Common.targets.
+  <Target Name="BeforeBuild">
+  </Target>
+  <Target Name="AfterBuild">
+  </Target>
+  -->
+</Project>
