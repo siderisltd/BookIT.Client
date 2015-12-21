@@ -5,10 +5,11 @@
     function RegisterController(auth, $location, $timeout, notifier) {
         var vm = this,
             numberOfFields = $('.forms li').length,
-            updateValue = 100 / numberOfFields;
+            updateValue = 100 / numberOfFields,
+            CLIENT_ROLE = 'Client';
 
         vm.status = "Profile completeness...";
-        
+
         vm.changeInput = function () {
             debugger;
             var totalUpdate = 0;
@@ -21,38 +22,69 @@
                         totalUpdate += updateValue;
                     } else if (!isOptionElement) {
                         totalUpdate += updateValue;
-                    } 
-                } 
+                    }
+                }
             });
             vm.progress = totalUpdate;
         };
 
 
+        function checkAndAssignClientRole(user) {
+            user.roles = user.roles || [];
+            //client role does not exist in the array of roles
+            if ($.inArray(CLIENT_ROLE, user.roles) !== 0) {
+                user.roles.push(CLIENT_ROLE);
+            }
+        }
+
         vm.registerUser = function registerUser(user, registerUserForm) {
             if (registerUserForm.$valid) {
+                checkAndAssignClientRole(user);
                 auth.register(user)
-                    .then(function() {
+                    .then(function () {
                         notifier.success('User registered!');
                         $location.path('/account/login');
-                    }, function(err) {
+                    }, function (err) {
                         notifier.error('Internal user registration problem');
                     });
             }
         }
 
-        vm.registerCompany = function registerCompany(user, registerCompanyForm) {
+        vm.registerCompany = function registerCompany(companyCreator, registerCompanyForm) {
             if (registerCompanyForm.$valid) {
-                auth.register(user)
-                    .then(function() {
+                debugger;
+                checkAndAssignClientRole(companyCreator);
+                auth.register(companyCreator)
+                    .then(function () {
                         notifier.success('Company registered!');
                         $location.path('/account/login');
-                    }, function(err) {
+                    }, function (err) {
                         notifier.error('Internal company registration problem');
                         $location.path('/account/login');
                     });
             }
-        
+
         }
+
+        vm.selectOptions = {
+            placeholder: "Select roles...",
+            dataTextField: "RoleName",
+            dataValueField: "RoleValue",
+            valuePrimitive: true,
+            autoBind: false,
+            dataSource: [
+                { RoleName: 'Owner', RoleValue: 'Owner' },
+                { RoleName: 'Admin', RoleValue: 'Admin' },
+                { RoleName: 'Creator', RoleValue: 'Creator' },
+                { RoleName: 'Employee', RoleValue: 'Employee' },
+                { RoleName: 'Manager', RoleValue: 'Manager' },
+                { RoleName: 'Supervisor', RoleValue: 'Supervisor' },
+                { RoleName: 'Worker', RoleValue: 'Worker' },
+                { RoleName: 'Client', RoleValue: 'Client' }
+            ]
+        }
+
+        //vm.selectedIds = ['Owner', 'Admin'];
     }
 
 

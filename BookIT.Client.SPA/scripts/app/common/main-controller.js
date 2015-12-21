@@ -19,8 +19,8 @@
             identity.getUser()
                  .then(function (user) {
                      debugger;
-                     vm.globallySetCurrentUserWhenLogin = user;
-                     console.log(user);
+                     vm.globallySetCurrentUserWhenLogin = user.Username;
+                     vm.globallySetCurrentUserWhenLoginRoles = user.Roles;
                  });
         }
     }

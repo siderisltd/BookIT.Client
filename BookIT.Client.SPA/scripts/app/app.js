@@ -95,6 +95,9 @@
                 });
         }
     };
+    //DO NOT FORGET TO CHANGE baseUrl to CLOUD SERVER URL BEFORE UPLOAD !!!!
+    var LOCAL_SERVER_URL = 'http://localhost:1715/api/';
+    var CLOUD_SERVER_URL = 'http://bserver2016.apphb.com/api/';
 
     angular.module('bookitApp.directives', []);
     angular.module('bookitApp.services', []);
@@ -105,6 +108,6 @@
         .config(['$routeProvider', '$locationProvider', config])
         .run(['auth', '$cookies', '$http', '$rootScope', '$location', run])
         .value('toastr', toastr)
-        .constant('baseUrl', 'http://bserver2016.apphb.com/api/');
+        .constant('baseUrl', CLOUD_SERVER_URL);
 
 }());

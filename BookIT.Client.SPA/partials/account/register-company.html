@@ -3,40 +3,77 @@
     <h4>{{vm.status}}</h4>
     <div kendo-progress-bar="progressBar" k-min="0" k-max="100" ng-model="vm.progress" style="width: 100%;"></div>
 
-    <form class="form-horizontal" name="registerCompanyForm">
+    <form class="form-horizontal" name="companyRegistrationForm">
         <ul class="forms">
             <li>
-                <label>Company Name</label>
-                <input type="text" name="firstName" value="" class="k-textbox" ng-model="vm.name" ng-blur="vm.changeInput()" />
+                <label for="input-firstName">First Name</label>
+                <input type="text" id="input-firstName" required="required" class="k-textbox" placeholder="First name" ng-model="companyCreator.firstName" ng-blur="vm.changeInput()" />
             </li>
             <li>
-                <label>Company Address</label>
-                <input type="text" name="companyAddress" value="" class="k-textbox" ng-model="company.address" ng-blur="vm.changeInput()" />
+                <label for="input-lastName">Last Name</label>
+                <input type="text" id="input-lastName" required="required" class="k-textbox" placeholder="Last name" ng-model="companyCreator.lastName" ng-blur="vm.changeInput()" />
             </li>
             <li>
-                <label>Business Type</label>
-                <select id="businessTypeInput" name="businessType" ng-model="company.businessType" ng-blur="vm.changeInput()">
-                    <option value="Hairdress">Male</option>
-                    <option value="Cosmetics">Female</option>
-                    <option value="Default" selected="selected">Rather not say</option>
-                </select>
+                <label for="input-email">Email</label>
+                <input type="email" id="input-email" required="required" class="k-textbox" placeholder="Email" ng-model="companyCreator.email" ng-blur="vm.changeInput()" />
             </li>
             <li>
-                <label>MOL First Name</label>
-                <input type="text" name="molFirstName" value="" class="k-textbox" ng-model="company.molName" ng-blur="vm.changeInput()" />
+                <label for="input-username">Username</label>
+                <input type="text" id="input-username" required="required" class="k-textbox" placeholder="Username" ng-model="companyCreator.username" ng-blur="vm.changeInput()" />
+            </li>
+            <li>
+                <label for="input-password">Password</label>
+                <input type="password" class="form-control" id="input-password" placeholder="Password" required="required" ng-model="companyCreator.password" ng-blur="vm.changeInput()">
+            </li>
+            <li>
+                <label for="input-confirm-password">Confirm Password</label>
+                <input type="password" class="form-control" id="input-confirm-password" placeholder="Confirm password" required="required" ng-model="companyCreator.confirmPassword" ng-blur="vm.changeInput()">
+            </li>
+            <li>
+                <div class="demo-section k-content">
+                    <h4>Select Roles</h4>
+                    <select kendo-multi-select k-options="vm.selectOptions" ng-model="companyCreator.roles" required="required"></select>
+                </div>
             </li>
         </ul>
     </form>
-    <button class="btn btn-primary" ng-click="vm.registerCompany(user, registerCompanyForm)" ng-disabled="registerCompanyForm.$invalid || company.password != company.confirmPassword">Submit</button>
+    <button class="btn btn-primary" ng-click="vm.registerCompany(companyCreator, companyRegistrationForm)" ng-disabled="companyRegistrationForm.$invalid || company.password != company.confirmPassword">Submit</button>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br/>
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
+    <br />
 </div>
 
 <script>
     $(document).ready(function () {
-
+        //initialize kendo dropdown
         $("#businessTypeInput").kendoDropDownList();
+        //
 
+        //initialize kendo multi-select
+        var required = $("#required").kendoMultiSelect().data("kendoMultiSelect");
+
+        console.log(required)
+        //var optional = $("#optional").kendoMultiSelect({
+        //    autoClose: false
+        //}).data("kendoMultiSelect");
+        //
     });
 </script>
+
+
 <style>
     #profileCompleteness {
         width: 100%;
@@ -60,4 +97,16 @@
         .forms li {
             margin-bottom: 1.5em;
         }
+
+         
+        /*Roles multiselect*/
+        .demo-section label {
+            display: block;
+            margin: 15px 0 5px 0;
+        }
+        #get {
+            float: right;
+            margin: 25px auto 0;
+        }
+        /*End roles multiselect*/
 </style>
