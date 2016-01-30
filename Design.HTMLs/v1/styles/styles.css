@@ -1,0 +1,37 @@
+﻿body, div {
+    margin: 0;
+    padding: 0;
+    font-family: roboto, sans-serif;
+    font-size: 100px;
+    color: #263238;
+}
+
+.wrapper {
+    width: 704px;
+    height: 1250px;
+    padding-top: 18%;
+    position: absolute;
+}
+
+.background {
+    width: 704px;
+    height: 1250px;
+    background: url(../imgs/fon.png) no-repeat;
+    background-size: cover;
+    opacity: 0.2;
+    filter: alpha(opacity=20);
+}
+
+    .wrapper .logo {
+        width: 550px;
+        height: 550px;
+        margin: auto;
+        background-color: #00acc1;
+        border: 8px solid #263238;
+        border-radius: 50%;
+    }
+
+    .wrapper .title {
+        text-align: center;
+        margin-top: 100px;
+    }
