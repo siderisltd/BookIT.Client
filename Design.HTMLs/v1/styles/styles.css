@@ -1,18 +1,16 @@
-﻿body, div {
+﻿body, div, header, section, input, h2 {
     margin: 0;
     padding: 0;
 }
 
 body {
-    font-family: roboto, sans-serif;
+    font-family: Roboto, sans-serif;
     font-size: 100px;
 }
 
 .wrapper {
     width: 704px;
     height: 1250px;
-    padding-top: 18%;
-    position: absolute;
     color: #263238;
     background-color: #eee;
 }
