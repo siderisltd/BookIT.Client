@@ -11,6 +11,10 @@ body {
 .wrapper {
     width: 704px;
     height: 1250px;
+<<<<<<< HEAD
+=======
+    position: absolute;
+>>>>>>> 84b544db1701b73bacdadd52236d582ba3c8a90c
     color: #263238;
     background-color: #eee;
 }
