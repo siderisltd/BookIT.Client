@@ -11,19 +11,3 @@
   margin-top: 45%;
 }
 
-.input {
-  display: block;
-  width: 75%;
-  height: 123px;
-  padding: 20px;
-  margin: 30px auto;
-  background-color: none;
-  border: 3px solid #00acc1;
-  font-size: 0.7em;
-  color: #00acc1;
-}
-
-.button {
-  background-color: #00acc1;
-  color: #fff;
-}

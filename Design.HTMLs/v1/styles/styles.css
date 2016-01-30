@@ -1,4 +1,9 @@
-﻿body, div, header, section, input, h2 {
+﻿@font-face {
+    font-family: Roboto;
+    src: url(../fonts/Roboto/Roboto-Light.ttf);
+}
+
+body, div, header, section, input, h2 {
     margin: 0;
     padding: 0;
 }
@@ -11,10 +16,7 @@ body {
 .wrapper {
     width: 704px;
     height: 1250px;
-<<<<<<< HEAD
-=======
     position: absolute;
->>>>>>> 84b544db1701b73bacdadd52236d582ba3c8a90c
     color: #263238;
     background-color: #eee;
 }
@@ -32,3 +34,33 @@ body {
         text-align: center;
         margin-top: 100px;
     }
+
+
+.input-form {
+    position: relative;
+    display: block;
+    padding: 30px;
+    margin-top: 32px;
+    width: 64%;
+    font-size: 0.5em;
+    border: 2px solid #00acc1;
+    text-align:center;
+}
+
+.input {
+  display: block;
+  width: 75%;
+  height: 123px;
+  padding: 20px;
+  margin: 30px auto;
+  background-color: transparent;
+  border: 3px solid #00acc1;
+  font-size: 0.7em;
+  color: #00acc1;
+}
+
+
+.button {
+    background-color: #00acc1;
+    color: #fff;
+}
