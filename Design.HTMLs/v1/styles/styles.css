@@ -1,9 +1,11 @@
 ﻿body, div {
     margin: 0;
     padding: 0;
+}
+
+body {
     font-family: roboto, sans-serif;
     font-size: 100px;
-    color: #263238;
 }
 
 .wrapper {
@@ -11,15 +13,8 @@
     height: 1250px;
     padding-top: 18%;
     position: absolute;
-}
-
-.background {
-    width: 704px;
-    height: 1250px;
-    background: url(../imgs/fon.png) no-repeat;
-    background-size: cover;
-    opacity: 0.2;
-    filter: alpha(opacity=20);
+    color: #263238;
+    background-color: #eee;
 }
 
     .wrapper .logo {
